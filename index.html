@@ -2,61 +2,185 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Athul Krishna | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Athul Krishna | Computer Science Portfolio</title>
+
   <style>
-    body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; background:#f7f7f7; }
-    .card { max-width: 900px; background: white; padding: 28px; border-radius: 12px; box-shadow: 0 8px 18px rgba(0,0,0,0.08); }
-    h1 { margin-top: 0; }
-    a { text-decoration: none; }
-    .row { display: flex; gap: 20px; flex-wrap: wrap; }
-    .pill { display:inline-block; padding:6px 10px; border-radius: 999px; background:#eee; margin: 6px 6px 0 0; font-size: 14px; }
-    .project { padding:14px; border:1px solid #eee; border-radius: 10px; margin-top: 12px; }
-    .muted { color:#666; }
+    :root {
+      --bg: #0e0b16;
+      --card: #16102a;
+      --primary: #8b5cf6;
+      --text: #e5e7eb;
+      --muted: #a1a1aa;
+      --border: #2a2356;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: linear-gradient(180deg, #0e0b16, #120c24);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 40px 16px;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: auto;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 32px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.45);
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      margin: 0;
+      color: white;
+    }
+
+    h2 {
+      color: var(--primary);
+      margin-top: 36px;
+      margin-bottom: 12px;
+      font-size: 1.3rem;
+    }
+
+    p {
+      color: var(--muted);
+      max-width: 80ch;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      margin-bottom: 24px;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skill {
+      background: rgba(139,92,246,0.15);
+      border: 1px solid rgba(139,92,246,0.35);
+      color: #ddd;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+      margin-top: 12px;
+    }
+
+    .project {
+      background: #120c24;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .project:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+    }
+
+    .project a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .links a {
+      display: inline-block;
+      margin-right: 18px;
+      margin-top: 8px;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 30px;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
   </style>
 </head>
+
 <body>
-  <div class="card">
-    <h1>Athul Krishna</h1>
-    <p class="muted">Final-year BSc Computer Science student • Sheffield Hallam University</p>
+  <div class="container">
+    <div class="card">
 
-    <h2>About</h2>
-    <p>
-      I’m a Computer Science student with experience in C#, Python, SQL, and web development.
-      I’m interested in graduate software / IT roles and building practical, user-focused solutions.
-    </p>
+      <h1>Athul Krishna</h1>
+      <div class="subtitle">
+        Final-year BSc Computer Science student · Sheffield Hallam University
+      </div>
 
-    <h2>Skills</h2>
-    <div>
-      <span class="pill">C#</span>
-      <span class="pill">Python</span>
-      <span class="pill">SQL</span>
-      <span class="pill">HTML/CSS</span>
-      <span class="pill">JavaScript (basic)</span>
-      <span class="pill">Git</span>
-      <span class="pill">Linux</span>
-      <span class="pill">OOP</span>
+      <h2>About Me</h2>
+      <p>
+        I am a final-year Computer Science student with experience in C#, Python,
+        SQL, and web development. I enjoy building practical, reliable software
+        and I am actively seeking graduate software or IT roles.
+      </p>
+
+      <h2>Skills</h2>
+      <div class="skills">
+        <span class="skill">C#</span>
+        <span class="skill">Python</span>
+        <span class="skill">SQL</span>
+        <span class="skill">C++</span>
+        <span class="skill">HTML</span>
+        <span class="skill">CSS</span>
+        <span class="skill">JavaScript</span>
+        <span class="skill">Git</span>
+        <span class="skill">Linux</span>
+        <span class="skill">OOP</span>
+        <span class="skill">Data Structures</span>
+      </div>
+
+      <h2>Projects</h2>
+      <div class="projects">
+        <div class="project">
+          <strong>Final Year Project</strong>
+          <p>Describe what it does, technologies used, and what you learned.</p>
+          <a href="https://github.com/Akrish101" target="_blank">View on GitHub →</a>
+        </div>
+
+        <div class="project">
+          <strong>Database Management System</strong>
+          <p>SQL-based system focusing on data integrity and security.</p>
+          <a href="https://github.com/Akrish101" target="_blank">View on GitHub →</a>
+        </div>
+      </div>
+
+      <h2>Links</h2>
+      <div class="links">
+        <a href="https://github.com/Akrish101" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/athul-krishna2005" target="_blank">LinkedIn</a>
+        <a href="mailto:akrish1.314@gmail.com">Email</a>
+      </div>
+
+      <footer>
+        © 2026 Athul Krishna · Built with GitHub Pages
+      </footer>
+
     </div>
-
-    <h2>Projects</h2>
-    <div class="project">
-      <strong>Project 1 – (Add your title)</strong>
-      <p class="muted">Short 1–2 lines describing what it does and what you used.</p>
-      <a href="https://github.com/Akrish101" target="_blank">View on GitHub</a>
-    </div>
-
-    <div class="project">
-      <strong>Project 2 – (Add your title)</strong>
-      <p class="muted">Short 1–2 lines describing what it does and what you used.</p>
-      <a href="https://github.com/Akrish101" target="_blank">View on GitHub</a>
-    </div>
-
-    <h2>Links</h2>
-    <ul>
-      <li><a href="https://github.com/Akrish101" target="_blank">GitHub: Akrish101</a></li>
-      <li><a href="https://linkedin.com/in/athul-krishna2005" target="_blank">LinkedIn</a></li>
-      <li>Email: <a href="mailto:akrish1.314@gmail.com">akrish1.314@gmail.com</a></li>
-    </ul>
   </div>
 </body>
 </html>
